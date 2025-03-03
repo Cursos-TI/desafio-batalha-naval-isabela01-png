@@ -16,8 +16,14 @@ int main (){
     for (int j = 0 ; j<10 ; j++){
       printf ("%c", linha [j]) ; //Imprime os números das colunas
     }
+      printf("\n") ;
+
+// Imprimindo cada elemento da linha //
+
       for (int i = 0 ; i<10 ; i++) {
-        printf ("%c", linha [i]);
-    
-      
+        printf ("%2d" , i+1) ; // Imprime os números das linhas 
+
+        for (int j = 0 ; j<10 ; j++){
+            printf ("%d" , tabuleiro[i][j]);
       }
+      printf("\n");
