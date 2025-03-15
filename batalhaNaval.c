@@ -1,34 +1,36 @@
 #include <stdio.h>
 
+//Desafio Batalha Naval//
+#define Linhas 10
+#define colunas 10
+
 int main (){
+  printf ("Tabuleiro Batalha Naval\n");
+
+  //Criando a linha
     char linha [10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'} ;
+    
+    for (int j = 0 ; j < 10 ; j++ ) {
+      printf ("%c\t" , linha [j]) ;
+    }
+   printf ("\n") ;
+
     // Criando o Tabuleiro (Matriz 10x10)//
-    int tabuleiro[10][10];
-    int i , int j ;
+    int matriz [linhas][Colunas] ;
+
+     for (int i = 0 ; i< Linhas ; i++ ){
+      printf ("%2d\t", i+1) ;
+     for (int j = 0 ; j < Colunas ; j++) {
+      matriz [i][j] = 0 ;
+      printf ("%d\t", matriz [i][j]) ;
+     }
 
     // inicializar o tabuleiro com "água" (valor 0)
     for (int i = 0 ; i < 10 ; i++) {
      for (int j = 0 ; j < 10 ; j++) {
-      tabuleiro [i][j] = 0 ;
-        printf("%d \n", tabuleiro[0][10]);
+      matriz [i][j] = 0 ;
+        printf("%d \n", matriz[0][10]);
      }
-      printf("\n");
-
-    //Exibindo o Tabuleiro//
-    printf("-TABULEIRO BATALHA NAVAL"- \n);
-    for (int j = 0 ; j<10 ; j++){
-      printf ("%c", linha [j]) ; //Imprime os números das colunas
-    }
-      printf("\n") ;
-
-// Imprimindo cada elemento da linha //
-
-      for (int i = 0 ; i<10 ; i++) {
-        printf ("%2d" , i+1) ; // Imprime os números das linhas 
-
-        for (int j = 0 ; j<10 ; j++){
-            printf ("%d" , tabuleiro[i][j]);
-      }
       printf("\n");
 
   // Posicionando um navio de tamanho 3 horizontalmente//
@@ -38,7 +40,7 @@ int main (){
   int i ; // para o loop 
   // Preencher o navio horizontalmente //
   for(i=0 ; i< tamanho ; i++){
-    tabuleiro [linha][coluna+i] = 3 ;
+    matriz  [linha][coluna+i] = 3 ;
    }
 printf ("\n") ;
 
@@ -49,7 +51,7 @@ printf ("\n") ;
    int i ;
    //Preencher o navio verticalmente//
    for (i=0 ; i < tamanho ; i++) {
-      tabuleiro [linha + i ][coluna] = 3 ;
+      matriz [linha + i ][coluna] = 3 ;
    }
    printf ("\n") ;
 
